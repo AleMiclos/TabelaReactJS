@@ -18,7 +18,7 @@ export class Alunos extends Component {
 
   // Função para buscar os alunos e seus scores
   buscarAlunos() {
-    fetch('https://api-mongo-db-omega.vercel.app/scores')  // Substitua pela URL da sua API no Vercel
+    fetch('https://apimongodb-3dq1.onrender.com/scores')  // Substitua pela URL da sua API no Vercel
       .then(response => response.json())
       .then(data => this.setState({ alunos: data }))
       .catch(console.log);
