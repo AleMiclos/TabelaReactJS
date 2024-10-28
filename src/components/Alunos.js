@@ -23,7 +23,7 @@ export class Alunos extends Component {
 
   // Função para buscar os alunos e seus scores
   buscarAlunos() {
-    fetch('https://apimongodb-3dq1.onrender.com/save-score/genius')  // Altere para a URL da sua API, se necessário
+    fetch('https://apimongodb-3dq1.onrender.com/scores/genius')  // Altere para a URL da sua API, se necessário
       .then(response => response.json())
       .then(data => this.setState({ alunos: data }))
       .catch(console.log);
