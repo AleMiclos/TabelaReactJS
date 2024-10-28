@@ -4,13 +4,19 @@ import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Alunos } from './components/Alunos';
-
+import logo  from './Logo-Santa-Lucia.png';
 function App() {
   return (
     <Container className="Container">
       <BrowserRouter>
         <Navbar bg='light' expand='lg'>
-          <Navbar.Brand as={Link} to="/">Faculdade Santa Lucia</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+            <img
+              src={logo}
+              alt="Faculdade Santa Lucia"
+              style={{ height: '40px' }} // Defina a altura conforme necessário
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='mr-auto'>

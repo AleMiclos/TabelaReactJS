@@ -1,1 +1,19 @@
 
+/* styles.css */
+.Container {
+    margin: 20px;
+}
+
+.navbar {
+    background-color: #343a40; /* Cor de fundo diferente */
+}
+
+.nav-link {
+    color: #fff !important; /* Mudar a cor do link */
+}
+
+.nav-link:hover {
+    color: #ddd !important; /* Cor do link ao passar o mouse */
+}
+
+/* Adicione mais estilos conforme necessário */
