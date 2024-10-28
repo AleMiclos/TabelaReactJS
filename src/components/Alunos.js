@@ -13,12 +13,17 @@ export class Alunos extends Component {
   }
 
   componentDidMount() {
-    this.buscarAlunos();
+    this.buscarAlunos(); // Busca os alunos ao montar o componente
+    this.interval = setInterval(this.buscarAlunos, 5000); // Atualiza a cada 5 segundos
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval); // Limpa o intervalo ao desmontar o componente
   }
 
   // Função para buscar os alunos e seus scores
   buscarAlunos() {
-    fetch('https://apimongodb-3dq1.onrender.com/scores')  // Substitua pela URL da sua API no Vercel
+    fetch('https://apimongodb-3dq1.onrender.com/save-score/genius')  // Altere para a URL da sua API, se necessário
       .then(response => response.json())
       .then(data => this.setState({ alunos: data }))
       .catch(console.log);
