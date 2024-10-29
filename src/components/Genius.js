@@ -13,35 +13,36 @@ export class Genius extends Component {
   }
 
   componentDidMount() {
-    this.buscarAlunos(); // Busca os alunos ao montar o componente
-    this.interval = setInterval(this.buscarAlunos, 5000); // Atualiza a cada 5 segundos
+    this.buscarAlunos(); 
+    this.interval = setInterval(this.buscarAlunos, 5000); 
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval); // Limpa o intervalo ao desmontar o componente
+    clearInterval(this.interval); 
   }
 
   // Função para buscar os alunos e seus scores
   buscarAlunos() {
-    fetch('https://apimongodb-3dq1.onrender.com/scores/genius')  // Altere para a URL da sua API, se necessário
+    fetch('https://apimongodb-3dq1.onrender.com/scores/genius') 
       .then(response => response.json())
       .then(data => this.setState({ alunos: data }))
       .catch(console.log);
   }
 
-  // Função para renderizar a tabela com nome e score
   renderTabela() {
     return (
       <Table striped bordered hover>
         <thead>
           <tr>
+            <th>Posição</th> {/* Nova coluna para a posição */}
             <th>Nome</th>
             <th>Pontos</th>
           </tr>
         </thead>
         <tbody>
-          {this.state.alunos.map((aluno) => (
+          {this.state.alunos.map((aluno, index) => (
             <tr key={aluno._id}>
+              <td>{index + 1}</td> {/* Exibe a posição com base no índice */}
               <td>{aluno.username}</td>
               <td>{aluno.score}</td>
             </tr>

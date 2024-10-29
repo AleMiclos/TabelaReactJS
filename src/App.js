@@ -16,7 +16,7 @@ function App() {
             <img
               src={logo}
               alt="Faculdade Santa Lucia"
-              style={{ height: '40px' }} // Defina a altura conforme necessário
+              style={{ height: '40px' }} 
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -24,8 +24,8 @@ function App() {
             <Nav className='mr-auto'>
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               <NavDropdown title='Tabela' id='basic-nav-dropdown'>
-                <NavDropdown.Item as={Link} to='/Genius'>Jogo Da Navinha</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to='/Space'>Jogo Do Genio</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/Genius'>Jogo Do Genio</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/Space'>Jogo Da Navinha</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
