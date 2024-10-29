@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
-export class Alunos extends Component {
+export class Genius extends Component {
   constructor(props) {
     super(props);
 
@@ -61,4 +61,4 @@ export class Alunos extends Component {
   }
 }
 
-export default Alunos;
+export default Genius;
