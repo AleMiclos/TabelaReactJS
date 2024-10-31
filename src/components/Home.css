@@ -31,10 +31,10 @@
     margin: 10px 0;
     text-decoration: none; 
     color: #02031a;
-    text-align: center;
+    font-size: 18px;
   }
   
   .home-container a:hover {
     color: #531b1f;
 }
-  
+

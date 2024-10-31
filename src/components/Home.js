@@ -12,11 +12,11 @@ export class Home extends Component {
           <li>ReactJS</li>
         </ul>
 
-        <h3>
-          <a href="/Genius">Tabela de Pontos do jogo do Genius</a>
-          <a href="/Space"> Tabela de Pontos do jogo da Navinha</a>
-          <a href="/Reflexo">Tabela de Pontos do jogo do Reflexo</a>
-        </h3>
+        <ul className="tabela">
+         <li><a href="/Genius">Tabela de Pontos do jogo do Genius</a></li> 
+         <li><a href="/Space"> Tabela de Pontos do jogo da Navinha</a></li> 
+         <li><a href="/Reflexo">Tabela de Pontos do jogo do Reflexo</a></li> 
+        </ul>
       </div>
     );
   }
