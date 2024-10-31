@@ -13,9 +13,9 @@ export class Home extends Component {
         </ul>
 
         <ul className="tabela">
-         <li><a href="/Genius">Tabela de Pontos do jogo do Genius</a></li> 
-         <li><a href="/Space"> Tabela de Pontos do jogo da Navinha</a></li> 
-         <li><a href="/Reflexo">Tabela de Pontos do jogo do Reflexo</a></li> 
+         <li><a href="/Genius"> ↪ Tabela de Pontos do jogo do Genius</a></li> 
+         <li><a href="/Space"> ↪ Tabela de Pontos do jogo da Navinha</a></li> 
+         <li><a href="/Reflexo">↪ Tabela de Pontos do jogo do Reflexo</a></li> 
         </ul>
       </div>
     );
