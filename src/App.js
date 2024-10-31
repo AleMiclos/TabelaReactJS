@@ -4,7 +4,8 @@ import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Genius } from './components/Genius';
-import { Space } from './components/Space'
+import { Space } from './components/Space';
+import { Reflexo } from './components/Reflexo';
 import logo  from './Logo-Santa-Lucia.png';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <NavDropdown title='Tabela' id='basic-nav-dropdown'>
                 <NavDropdown.Item as={Link} to='/Genius'>Jogo Do Genio</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to='/Space'>Jogo Da Navinha</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/Reflexo'>Jogo Do Reflexo</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -34,7 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Genius" element={<Genius />} />
           <Route path="/Space" element={<Space />} />
-
+          <Route path="/Reflexo" element={<Reflexo />} />
         </Routes>
       </BrowserRouter>
     </Container>

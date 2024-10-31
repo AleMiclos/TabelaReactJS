@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
-export class Space extends Component {
+export class Reflexo extends Component {
   constructor(props) {
     super(props);
 
@@ -21,16 +21,20 @@ export class Space extends Component {
     clearInterval(this.interval); 
   }
 
-  
+  // Função para buscar os alunos e seus scores
   buscarAlunos() {
-    fetch('https://apimongodb-3dq1.onrender.com/scores/spaceship') 
-      .then(response => response.json())
-      .then(data => this.setState({ alunos: data }))
-      .catch(console.log);
+    fetch('https://reflexo-game.onrender.com/api/results')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => this.setState({ alunos: data, error: null })) // Reseta o erro
+      .catch(error => this.setState({ error: error.message })); // Armazena o erro
   }
 
   renderTabela() {
-    
     return (
       <Table striped bordered hover>
         <thead>
@@ -63,4 +67,4 @@ export class Space extends Component {
   }
 }
 
-export default Space;
+export default Reflexo;
