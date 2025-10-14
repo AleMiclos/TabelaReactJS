@@ -1,0 +1,176 @@
+/* GameDashboard.module.css */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #0d1117;
+}
+
+.dashboard {
+    margin: 0;
+    padding: 40px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.mainTitle {
+    text-align: center;
+    font-size: 3rem;
+    color: #58a6ff;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gameCard {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.gameCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(88, 166, 255, 0.2);
+}
+
+.gameTitle {
+    font-size: 1.8rem;
+    color: #58a6ff;
+    margin: 0 0 16px 0;
+    text-align: center;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 16px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #8b949e;
+}
+
+.rating {
+    font-weight: bold;
+    color: #f1e05a; /* Cor amarela para estrelas */
+}
+
+.tableContainer {
+    overflow-x: auto;
+    flex-grow: 1; /* Faz a tabela ocupar o espaço restante */
+}
+
+.tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tableContainer thead {
+    background-color: #21262d;
+}
+
+.tableContainer th {
+    font-size: 0.9rem;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tableContainer tbody tr {
+    border-bottom: 1px solid #30363d;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tableContainer tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tableContainer tbody tr:hover {
+    background-color: #21262d;
+}
+
+.tableContainer td:first-child {
+    width: 40px;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+.loading, .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    color: #8b949e;
+}
+
+.error {
+    color: #f85149;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 20px;
+    }
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.statsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #21262d;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.statsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+.statsItem span:last-child {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.totalVotes {
+    color: #c9d1d9;
+}
+
+.statsSeparator {
+    width: 1px;
+    height: 40px;
+    background-color: #30363d;
+}
