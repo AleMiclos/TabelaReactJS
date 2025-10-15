@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './GameDashboard.module.css';
 
 // URL do seu backend
-const API_URL = 'https://winners-api-delta.vercel.app/api';
+const API_URL = 'https://newspapers-inform-rebound-gym.trycloudflare.com/api';
 
 const GameDashboard = () => {
     const [gameData, setGameData] = useState(null);
